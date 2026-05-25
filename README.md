@@ -1,6 +1,6 @@
 # miniflux-utils
 
-Utilities for Miniflux including MCP server and CLI tool.
+Utilities for [Miniflux](https://miniflux.app) including MCP server and CLI tool.
 
 ## Configuration
 
@@ -13,12 +13,14 @@ Required:
 Optional:
 - `MINIFLUX_TIMEOUT` - Miniflux client timeout (default: `30s`)
 
-### MCP Server Only
+### MCP Server Settings
 
-Content conversion:
+#### Content Conversion
+This project uses the [Jina Reader API](https://jina.ai/reader/) to convert HTML content into Markdown for use with the MCP server.
+
 - `CONVERTER_TIMEOUT` - HTML to Markdown converter timeout (default: `30s`)
 
-Caching:
+#### Caching
 - `MCP_CACHE_MODE` - Cache mode: `memory`, `disk`, or `both` (default: `disk`)
 - `MCP_CACHE_TTL` - Cache time-to-live (default: `24h`)
 - `MCP_CACHE_MAX_SIZE` - Cache max size in bytes (default: `1GB`)
